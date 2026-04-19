@@ -1,6 +1,6 @@
-const { createCanvas, loadImage, registerFont } = require(`canvas`);
-registerFont(`${__dirname}/../../assets/fonts/Noto-Regular.ttf`, { family: `Noto` });
-registerFont(`${__dirname}/../../assets/fonts/Noto-Emoji.ttf`, { family: `Noto` });
+const { createCanvas, loadImage, GlobalFonts } = require('@napi-rs/canvas');
+GlobalFonts.registerFromPath(`${__dirname}/../../assets/fonts/Noto-Regular.ttf`, `Noto`);
+GlobalFonts.registerFromPath(`${__dirname}/../../assets/fonts/Noto-Emoji.ttf`, `Noto`);
 const path = require(`path`);
 const { wrapText } = require(`../functions`);
 

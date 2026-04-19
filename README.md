@@ -28,7 +28,7 @@ yarn add discord-image-generation-v2
   - Meme templates (Lisa presentation, Stonk, etc.)
   - Fun effects (Facepalm, Kiss, Spank, etc.)
   - Badges and overlays (Jail, Wanted, Trash, etc.)
-- ✨ **Canvas Integration**: Built with Canvas, Jimp, and GifEncoder
+- ✨ **Canvas Integration**: Built with @napi-rs/canvas, Jimp, and gif-encoder-2
 
 ## Usage
 
@@ -79,10 +79,9 @@ src/
 
 ## Compatibility
 
-✅ **Works with all Canvas versions** - No more version lock-in issues!
-- Old Canvas versions
-- Latest Canvas versions
-- Any version in between
+✅ **Uses @napi-rs/canvas for better install reliability** - no native Canvas build required on most systems.
+- Works well on Node 18+ platforms with prebuilt binaries
+- No more Canvas version lock-in for your bot dependencies
 
 ## Used By
 
@@ -91,9 +90,9 @@ src/
 
 ## Dependencies
 
-- `canvas` - Any version (flexible)
-- `gifencoder` - Any version (flexible)
-- `jimp` - Any version (flexible)
+- `@napi-rs/canvas` - Prebuilt Canvas bindings for better install compatibility
+- `gif-encoder-2` - Pure JS GIF encoder
+- `jimp` - Image manipulation library
 
 ## Original Package
 

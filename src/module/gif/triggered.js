@@ -1,6 +1,6 @@
-const Canvas = require(`canvas`);
+const Canvas = require('@napi-rs/canvas');
 
-const GIFEncoder = require(`gifencoder`);
+const GIFEncoder = require('gif-encoder-2');
 
 module.exports = class Triggered {
     /**
