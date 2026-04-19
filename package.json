@@ -1,0 +1,39 @@
+{
+  "name": "discord-image-generation-v2",
+  "version": "1.0.0",
+  "description": "discord-image-generation is a powerful module that allows you to generate awesome images.",
+  "main": "src/index.js",
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "author": "ST",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sheikhtamimlover/discord-image-generationV2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sheikhtamimlover/discord-image-generationV2/issues"
+  },
+  "homepage": "https://github.com/sheikhtamimlover/discord-image-generationV2#readme",
+  "keywords": [
+    "discord",
+    "images",
+    "generation",
+    "gif",
+    "manipulation",
+    "canvas",
+    "jimp",
+    "photo",
+    "picture",
+    "drawing",
+    "stbot",
+    "sheikhtamimlover"
+  ],
+  "dependencies": {
+    "canvas": "*",
+    "gifencoder": "*",
+    "jimp": "*"
+  }
+}

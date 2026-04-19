@@ -11,13 +11,13 @@ The original discord-image-generation package was locked to an old Canvas versio
 ## Installation
 
 ```bash
-npm install discord-image-generationV2
+npm install discord-image-generation-v2
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add discord-image-generationV2
+yarn add discord-image-generation-v2
 ```
 
 ## Features
@@ -35,7 +35,7 @@ yarn add discord-image-generationV2
 ### Basic Example
 
 ```javascript
-const ImageGeneration = require('discord-image-generationV2');
+const ImageGeneration = require('discord-image-generation-v2');
 
 // Create an instance
 const gen = new ImageGeneration();
@@ -51,7 +51,7 @@ Perfect for Discord bots like **ST BOT** and **GoatBot v2**!
 ```javascript
 // Example: Using in a Discord command
 const fs = require('fs');
-const ImageGeneration = require('discord-image-generationV2');
+const ImageGeneration = require('discord-image-generation-v2');
 
 // Generate an image
 const output = './generated.png';
@@ -92,8 +92,12 @@ src/
 ## Dependencies
 
 - `canvas` - Any version (flexible)
-- `gifencoder` - v2.0.1+
-- `jimp` - v0.16.1+
+- `gifencoder` - Any version (flexible)
+- `jimp` - Any version (flexible)
+
+## Original Package
+
+This is an upgraded version of the original [discord-image-generation](https://github.com/Mr-KayJayDee/discord-image-generation) package. The original package had strict Canvas version requirements that caused compatibility issues. This upgraded version solves those issues by supporting any version of the dependencies.
 
 ## License
 
