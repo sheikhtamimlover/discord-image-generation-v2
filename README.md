@@ -2,11 +2,7 @@
 
 **Author:** ST (sheikhtamimlover)
 
-A powerful Node.js module that generates awesome images for Discord bots and other applications. This package has been upgraded to work with all versions of Canvas, solving compatibility issues found in the original version.
-
-## Why This Upgrade?
-
-The original discord-image-generation package was locked to an old Canvas version (`^2.6.1`), which caused installation issues with newer Node.js versions and system setups. **This upgraded version works with any Canvas version** - whether you're using the latest or any version in between. No more installation headaches!
+A powerful Node.js module that generates awesome images for Discord bots and other applications. This package provides a wide range of image manipulation effects, filters, and GIF animations.
 
 ## Installation
 
@@ -28,39 +24,33 @@ yarn add discord-image-generation-v2
   - Meme templates (Lisa presentation, Stonk, etc.)
   - Fun effects (Facepalm, Kiss, Spank, etc.)
   - Badges and overlays (Jail, Wanted, Trash, etc.)
-- ✨ **Canvas Integration**: Built with @napi-rs/canvas, Jimp, and gif-encoder-2
+- ✨ **Canvas Integration**: Built with canvas, Jimp, and gif-encoder-2
 
 ## Usage
 
 ### Basic Example
 
 ```javascript
-const ImageGeneration = require('discord-image-generation-v2');
+const { Blur } = require('discord-image-generation-v2');
 
-// Create an instance
-const gen = new ImageGeneration();
-
-// Generate an image effect
-gen.someEffect(imagePath, outputPath);
+const blur = new Blur();
+const imageBuffer = await blur.getImage('./input.png');
 ```
 
 ### Using with Discord Bot
 
-Perfect for Discord bots like **ST BOT** and **GoatBot v2**!
+Perfect for Discord bots! Here's an example:
 
 ```javascript
-// Example: Using in a Discord command
+const { Affect } = require('discord-image-generation-v2');
 const fs = require('fs');
-const ImageGeneration = require('discord-image-generation-v2');
 
 // Generate an image
-const output = './generated.png';
-await gen.affect('./user-avatar.png', output);
+const affect = new Affect();
+const output = await affect.getImage('./user-avatar.png');
 
-// Send to Discord
-message.reply({
-  files: [output]
-});
+// Save or send
+fs.writeFileSync('./generated.png', output);
 ```
 
 ## Project Structure
@@ -69,19 +59,22 @@ message.reply({
 src/
 ├── index.js              # Main entry point
 ├── assets/               # Fonts and assets
+│   └── fonts/            # Font files
 ├── module/
 │   ├── functions.js      # Core functions
 │   ├── filters/          # Image filters
 │   ├── gif/              # GIF animations
 │   ├── montage/          # Montage effects
 │   └── utils/            # Utility functions
+typings/
+└── index.d.ts            # TypeScript definitions
 ```
 
 ## Compatibility
 
-✅ **Uses @napi-rs/canvas for better install reliability** - no native Canvas build required on most systems.
-- Works well on Node 18+ platforms with prebuilt binaries
-- No more Canvas version lock-in for your bot dependencies
+- **Node.js**: 14+
+- **Canvas**: ^3.2.3 (latest)
+- Works on most systems with prebuilt binaries
 
 ## Used By
 
@@ -90,13 +83,9 @@ src/
 
 ## Dependencies
 
-- `@napi-rs/canvas` - Prebuilt Canvas bindings for better install compatibility
+- `canvas` - Canvas graphics library
 - `gif-encoder-2` - Pure JS GIF encoder
 - `jimp` - Image manipulation library
-
-## Original Package
-
-This is an upgraded version of the original [discord-image-generation](https://github.com/Mr-KayJayDee/discord-image-generation) package. The original package had strict Canvas version requirements that caused compatibility issues. This upgraded version solves those issues by supporting any version of the dependencies.
 
 ## License
 

@@ -1,4 +1,4 @@
-const Canvas = require('@napi-rs/canvas');
+const Canvas = require(`canvas`);
 
 module.exports = class Poutine {
     /**

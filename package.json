@@ -1,6 +1,6 @@
 {
   "name": "discord-image-generation-v2",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "description": "discord-image-generation is a powerful module that allows you to generate awesome images.",
   "main": "src/index.js",
   "types": "typings/index.d.ts",
@@ -32,8 +32,8 @@
     "sheikhtamimlover"
   ],
   "dependencies": {
-    "@napi-rs/canvas": "^0.1.99",
-    "gif-encoder-2": "^1.0.5",
+    "canvas": "^3.2.3",
+    "gifencoderv2": "^1.0.0",
     "jimp": "^1.6.1"
   }
 }

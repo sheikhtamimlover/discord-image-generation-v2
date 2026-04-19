@@ -1,5 +1,5 @@
-const Canvas = require('@napi-rs/canvas');
-const GIFEncoder = require('gif-encoder-2');
+const Canvas = require(`canvas`);
+const GIFEncoder = require(`gifencoderv2`);
 
 module.exports = class Blink {
 
